@@ -1,0 +1,51 @@
+<?php
+                $query="select no, email, level, chk_pre, str_pre_date, end_pre_date, point from tbl_user where no between 1 and 7;";
+                $result=$conn->query($query);
+
+                if(!$result) {
+                    echo "<script>alert('시스템에 장애가 발생하였습니다.');</script>";
+                    exit();
+
+                }else {
+                    $row=$result->fetch_assoc();
+                    if($result->num_rows > 0) {
+                        while($row=$result->fetch_assoc()) {
+
+                            $style="admin-user-pre-off";
+                            $email=$row['email'];
+                            
+                            $level=$row['level'];
+                            //translate integer to string.
+                            if($level>1) $level="회원";
+                            else if($level<=1) $level="운영자";
+
+                            $chk_pre=$row['chk_pre'];
+                            //translate integer to string.
+                            if($chk_pre==0) $chk_pre="미구독자";
+                            else if($chk_pre==1) { $chk_pre="구독자"; $style="admin-user-pre-on"; }
+
+                            $str_pre_date=$row['str_pre_date'];
+                            if($str_pre_date==0) $str_pre_date='미구독자';
+                            else $str_pre_date=date("Y년 m월 d일 H시 i분 s초", $str_pre_date);
+
+                            $end_pre_date=$row['end_pre_date'];
+                            if($end_pre_date==0) $end_pre_date='미구독자';
+                            else $end_pre_date=date("Y년 m월 d일 H시 i분 s초", $end_pre_date);
+
+                            $point=$row['point'];
+
+                            //view user information
+                            echo '<div class="admin-user-info-box">';
+                            echo '<div class="'.$style.'">'.$chk_pre.'</div>';
+                            echo '<p><span class="admin-user-title">메일</span><span class="admin-user-content">'.$email.'</span></p>';
+                            echo '<p><span class="admin-user-title">권한</span><span class="admin-user-content">'.$level.'</span></p>';
+                            echo '<p><span class="admin-user-title">시작</span><span class="admin-user-content">'.$str_pre_date.'</span></p>';
+                            echo '<p><span class="admin-user-title">마감</span><span class="admin-user-content">'.$end_pre_date.'</span></p>';
+                            echo '<p><span class="admin-user-title">동전</span><span class="admin-user-content">'.$point.'원</span></p>';
+                            echo '<p style="padding-top: 15px; text-align: center;"><a href="#"><span class="admin-user-out">회원탈퇴</span></a><a href="#"><span class="admin-user-modify">정보수정</span></a><a href="#"><span class="admin-user-block">이용차단</span></a></p>';
+                            echo '</div>';
+                        }
+                        echo '<br>';
+                    }
+                }
+                ?>

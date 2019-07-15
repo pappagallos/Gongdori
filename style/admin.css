@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+/*
+    Developer name is LEE WOOJIN. 
+    DAEJIN UNIV, Dept of computer engineering.
+    2018.02.28.
+*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+td {
+    text-align: center;
+    color: #FFF;
+    border-bottom: 1px solid #FFF;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+select {
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #FFF;
+    color: #FFF;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    letter-spacing: -0.1em;
+    width: 100%;
+}
+
+.admin-top-login {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: left;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.admin-bank-table {
+    text-align: center;
+    width: 300px;
+    height: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -140px 0 0 -150px;
+}
+
+.admin-price-table {
+    text-align: center;
+    width: 900px;
+    height: 380px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -190px 0 0 -450px;
+}
+
+.admin-price-box {
+    text-align: center;
+    width: 300px;
+    height: 250px;
+    transition: 0.3s;
+    float: left;
+}
+
+.admin-user-table {
+    text-align: center;
+    width: 900px;
+    height: 680px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -310px 0 0 -450px;
+}
+
+.admin-user-list {
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.admin-user-delete {
+    float: right;
+    padding: 7px;
+    width: 60px;
+    color: #FFF;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.admin-user-delete:hover {
+    background: rgba(180, 37, 37, 0.6);
+    transition: 0.3s;
+}
+
+.admin-user-modify {
+    float: right;
+    padding: 7px;
+    width: 60px;
+    color: #FFF;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.admin-user-modify:hover {
+    background: rgba(37, 82, 180, 0.6);
+    transition: 0.3s;
+}
+
+.admin-user-list-number {
+    margin-right: 7px;
+    padding: 3px 5px 3px 5px;
+}
+
+.admin-title {
+    padding: 0px 20px 2px 17px;
+    border-bottom: 1px solid #FFF;
+    letter-spacing: -0.1em;
+    color: #FFF;
+    font-size: 1.8em;
+    font-weight: 500;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.admin-content {
+    letter-spacing: -0.1em;
+    margin-right: 5px;
+    color: #FFF;
+    font-size: 1em;
+    font-weight: 500;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.admin-input-text {
+    border: 0;
+    color: #FFF;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 1em;
+    font-weight: 300;
+    padding: 5px 8px 5px 8px;
+    width: 190px;
+    letter-spacing: -0.1em;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.admin-price-info-table {
+    float: left;
+    margin-right: 15px;
+}
+
+.admin-lecture-table {
+    text-align: center;
+    width: 370px;
+    height: 470px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -235px 0 0 -185px;
+}
+
+.admin-customer-form-table {
+    text-align: center;
+    width: 350px;
+    height: 460px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -230px 0 0 -175px;
+}

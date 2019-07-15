@@ -1,0 +1,782 @@
+@charset "utf-8";
+
+/*
+    Developer name is LEE WOOJIN. 
+    DAEJIN UNIV, Dept of computer engineering.
+    2018.02.25.
+*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/* page background image setting */
+body {
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../data/image/main-background.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+
+li {
+    list-style-type: none;
+    float: left;
+    margin: 0;
+    margin-right: 7px;
+    padding: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: -0.1em;
+    color: #FFF;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+a {
+    text-decoration: none;
+    -moz-text-decoration-line: none;
+    -moz-text-decoration-line: none;
+    color: #FFF;
+}
+
+:-moz-placeholder {
+    color: #FFF;
+}
+
+:-ms-input-placeholder {
+    color: #FFF;
+}
+
+::-moz-placeholder {
+    color: #FFF;
+}
+
+::-webkit-input-placeholder {
+    color: #FFF;
+}
+
+.main-frame {
+    text-align: center;
+}
+
+.main-top-login {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    float: left;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.main-top-before-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: left;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 9px;
+    width: 100%;
+    height: 49px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.gongdori-logo {
+    position: absolute;
+    top: 80px;
+    left: 55px;
+}
+
+
+.connection-time {
+    position: absolute;
+    text-align: center;
+    top: 80px;
+    right: 60px;
+    color: #FFF;
+    font-size: 2em;
+    font-weight: 400;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.youtube-rec-on-off {
+    position: relative;
+    top: 4px;
+    width: 32px;
+    height: auto;
+}
+
+.broadcast-on {
+    font-weight: 500;
+    color: rgb(255, 0, 0);
+    padding: 3px 7px 3px 7px;
+    border: 5px solid rgb(255, 0, 0);
+    border-radius: 10px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.broadcast-off {
+    font-weight: 500;
+    color: rgb(95, 95, 95);
+    padding: 3px 7px 3px 7px;
+    border: 5px solid rgb(95, 95, 95);
+    border-radius: 15px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.main-notice-table {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 150px;
+    width: 600px;
+    height: 130px;
+    color: #FFF;
+    letter-spacing: -0.1em;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.main-notice-title {
+    font-size: 2em;
+    font-weight: 500;
+    color: #FFF;
+    letter-spacing: -0.1em;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.main-notice-content {
+    margin-top: 5px;
+    font-size: 1em;
+    font-weight: 300;
+    color: #FFF;
+    letter-spacing: -0.1em;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.main-info-img {
+    position: relative;
+    margin-right: 10px;
+    top: 7px;
+    width: 40px;
+    height: auto;
+}
+
+.main-lecture-table {
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 825px;
+}
+
+.lecture-box {
+    float: left;
+    margin: 0 auto;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    transition: .25s;
+}
+
+.lecture-box:hover {
+    transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transition: .25s;
+}
+
+.lecture-info-content {
+    position: relative;
+    z-index: 9;
+    width: 100%;
+    height: 110px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.lecture-title {
+    margin-top: 140px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: -0.1em;
+    color: #FFF;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.lecture-discription {
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: -0.1em;
+    color: #FFF;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.lecture-status {
+    text-align: right;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: -0.1em;
+    color: #FFF;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.btn {
+    border: 0;
+    color: #FFF;
+    background: none;
+    border-radius: 50px;
+    border: 1px solid #FFF;
+    font-size: 1em;
+    font-weight: 300;
+    padding: 7px 20px 7px 20px;
+    letter-spacing: -0.1em;
+    font-family: 'Noto Sans KR', sans-serif;
+    transition: .25s;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
+    -o-transition: .25s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #000;
+    border: 1px solid #000;
+    background: rgb(255, 255, 255);
+    transition: .25s;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
+    -o-transition: .25s;
+}
+
+.member-table {
+    text-align: center;
+    width: 250px;
+    height: 380px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -210px 0 0 -125px;
+}
+
+.subscription-table {
+    text-align: center;
+    width: 900px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -450px;
+}
+
+.subscription-box {
+    display:inline-block;
+    padding: 15px;
+    width: 250px;
+    height: 260px;
+    border: 1px solid #FFF;
+    transition: .25s;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
+    -o-transition: .25s;
+    margin-right: 15px;
+}
+
+.subscription-box:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transition: .25s;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
+    -o-transition: .25s;
+}
+
+.subscription-title {
+    padding: 0px 20px 2px 20px;
+    border-bottom: 1px solid #FFF;
+    letter-spacing: -0.1em;
+    color: #FFF;
+    font-size: 1.8em;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.subscription-content {
+    letter-spacing: -0.1em;
+    color: #FFF;
+    font-size: 1.2em;
+    font-weight: 300;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.subscription-box-content {
+    margin: 0 auto;
+    width: 350px;
+    border: 1px solid #FFF;
+    color: #FFF;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 300;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.subscription-price {
+    width: 150px;
+    letter-spacing: 0.1em;
+    color: #FFF;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-shadow: 0px 1px  2px rgba(0, 0, 0, 0.6);
+}
+
+.subscription-bank-info {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    line-height: 10px;
+}
+
+.bank-info-table {
+    position: absolute;
+    width: 250px;
+    height: 470px;
+    top: 50%;
+    left: 50%;
+    margin: -255px 0 0 -125px;
+    text-align: center;
+}
+
+.receipt-info-table {
+    position: absolute;
+    width: 400px;
+    height: 650px;
+    top: 50%;
+    left: 50%;
+    margin: -315px 0 0 -200px;
+    text-align: center;
+}
+
+.bank-info-title {
+    font-size: 0.8em;
+}
+
+.receipt-time-table {
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.receipt-time {
+    color: #FFF;
+    font-size: 1em;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+    letter-spacing: -0.1em;
+}
+
+.term-table {
+    position: absolute;
+    width: 550px;
+    left: 50%;
+    text-align: left;
+    margin: 100px 0 60px -275px; 
+}
+
+.term {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1px 10px 1px 10px;
+}
+
+.movie {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.web-lecture-info-table {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 150px;
+    width: 600px;
+    height: 130px;
+    color: #FFF;
+    letter-spacing: -0.1em;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.web-lecture-title {
+    font-size: 2em;
+    font-weight: 500;
+    color: #FFF;
+    letter-spacing: -0.1em;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.web-lecture-discription {
+    margin-top: 5px;
+    font-size: 1em;
+    font-weight: 300;
+    color: #FFF;
+    letter-spacing: -0.1em;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6); 
+}
+
+.gongdori-motive-n-info {
+    padding-top: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 120px;
+}
+
+.gongdori-admin-name {
+    width: 100px;
+    height: auto;
+}
+
+.customer-chat-frame {
+    position: relative; 
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    min-height: 700px;
+    border-radius: 5px;
+    padding: 85px 15px 15px 15px;
+    border: 1px solid #FFF;
+}
+
+.customer-chat-notice {
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #FFF;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #FFF;
+    font-weight: 400;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.customer-chat-notice-box {
+    position: absolute; 
+    top: 14px;
+    left: 55px; 
+    font-size: 15px; 
+    letter-spacing: -0.1em;
+}
+
+.customer-title {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #FFF;
+}
+
+.chat-name {
+    font-size: 15px;
+    letter-spacing: -0.1em;
+    padding-left: 5px;
+    color: #FFF;
+}
+
+.chat-time {
+    font-size: 14px;
+    color: #FFF;
+    font-weight: 300;
+}
+
+.chat {
+    font-size: 15px;
+    letter-spacing: -0.1em;
+    padding: 8px;
+    background: #FFF;
+    border-radius: 10px;
+}
+
+.user-chat {
+    font-size: 15px;
+    letter-spacing: -0.1em;
+    padding: 8px;
+    background: #fcce00;
+    border-radius: 10px;
+}
+
+.user-input-chat {
+    background: #fcce00;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.1em;
+    font-size: 15px;
+}
+
+.user-submit-chat-btn {
+    background: #fcce00;
+    padding: 8px;
+    font-size: 13px;
+    border: 0;
+    border-radius: 8px;
+    transition: .25s;
+    cursor: pointer;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
+    -o-transition: .25s;
+}
+
+.user-submit-chat-btn:hover {
+    cursor: pointer;
+    background: #FFF;
+    transition: .25s;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
+    -o-transition: .25s;
+}
+
+.user-chat-delete {
+    float: right;
+    text-align: center;
+    background-color: #ff535380;
+    width: 45px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.access-denied-content {
+    position: absolute;
+    width: 520px;
+    height: 310px;
+    left: 50%;
+    top: 50%;
+    margin: -175px 0 0 -260px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    text-align: center;
+    letter-spacing: -0.1em;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
+    -o-transition: .25s;
+}
+
+.access-denied-content:hover {
+    background: rgba(255, 134, 134, 0.4);
+}
+
+.btn-denied {
+    margin: 0 auto; 
+    width: 100px;
+    padding: 10px;
+    background: #000;
+    color: #FFF;
+    letter-spacing: -0.1em;
+}
+
+.download {
+    margin: 0 auto;
+    margin-bottom: 70px;
+    width: 400px;
+    height: 20px;
+    padding: 15px;
+    border: 1px solid #FFF;
+    color: #FFF;
+    letter-spacing: -0.1em;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+    font-weight: 300;
+    transition: .25s;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
+    -o-transition: .25s;
+}
+
+.download:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transition: .25s;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
+    -o-transition: .25s;
+}
+
+.input-text {
+    border: 0;
+    color: #FFF;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 1em;
+    font-weight: 300;
+    padding: 7px 20px 7px 20px;
+    width: 190px;
+    letter-spacing: -0.1em;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.link {
+    color: rgb(255, 227, 168);
+    border-bottom: 1px solid rgb(255, 227, 168);
+}
+
+.notice-board-table {
+    width: 825px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.notice-board-table > .left-board-name {
+    position: relative;
+    width: 200px;
+}
+
+.notice-board-table > .left-board-name > .board-name {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.notice-board-table > .right-board-list {
+    position: relative;
+    float: right;
+    margin-bottom: 100px;
+}
+
+.notice-board-table table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.notice-board-table th {
+    border-top: 3px solid #FFF;
+    border-bottom: 1px solid rgb(233, 233, 233);
+    padding: 15px 10px 15px 10px;
+    vertical-align: middle;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 400;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.notice-board-table .subject {
+    font-size: 15px;
+    font-weight: 300;
+    border-bottom: 1px solid rgb(233, 233, 233);
+    padding: 15px;
+    color: #FFF;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.notice-board-table .date {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    border-bottom: 1px solid rgb(233, 233, 233);
+    padding: 15px;
+    color: #FFF;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.notice-board-table .on-mouse-subject:hover {
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.notice-board-table > .btn-top {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+
+.notice-board-table .board-content {
+    float: right;
+    width: 600px;
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+    border-bottom: 1px solid #FFF;
+    font-size: 15px;
+    font-weight: 300;
+    color: #FFF;
+    letter-spacing: -0.1em;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.notice-board-table .btn-list {
+    position: absolute;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 50px;
+    right: 0;
+    bottom: 0;
+    padding: 10px 15px 10px 15px;
+    color: #FFF;
+    letter-spacing: -0.1em;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+    border: 1px solid #FFF;
+    transition: .25s;
+}
+
+.notice-board-table .btn-list:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: .25s;
+}
